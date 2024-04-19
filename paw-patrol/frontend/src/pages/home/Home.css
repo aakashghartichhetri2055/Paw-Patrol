@@ -1,0 +1,130 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: black;
+  color: #333;
+}
+
+section {
+  margin: 20px;
+  padding: 20px;
+  background: black;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mission-section, .features-section, .statistics-section, .testimonials-section, .events-section, .get-involved-section {
+  perspective: 1500px;
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateX(100%) rotateY(90deg);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0) rotateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-out {
+    from {
+        transform: translateX(0) rotateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(-100%) rotateY(-90deg);
+        opacity: 0;
+    }
+}
+
+.welcome-text, .quote-text {
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, background-color 0.5s ease;
+  transform-style: preserve-3d;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 2vw;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+  padding: 20px;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  width: 90%;
+  margin: auto;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  max-width: 90vw;
+  position: relative;
+  animation: colorChange 0.6s infinite;
+  p {
+    background-image: linear-gradient(to right, rgb(9, 142, 97), yellow, red);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+  
+}
+
+.welcome-text:hover, .quote-text:hover {
+  transform: scale(1.1) rotateY(20deg); 
+  background-color: rgba(11, 10, 12, 0.4); 
+}
+
+.welcome-text:hover {
+  box-shadow: 0 8px 32px 0 rgba(204, 10, 143, 0.37); 
+}
+
+.quote-text:hover {
+  box-shadow: 0 10px 45px rgba(213, 226, 74, 0.3);
+}
+
+.slide-in, .slide-out {
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #ff4081;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #f50057;
+  transform: translateY(-3px) scale(1.05);
+}
+
+section:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.welcome-section {
+  background-size: cover;
+  background-position: center;
+  height: 75vh;
+  width: 94.4vw; /* Adjusted to be responsive */
+}
+
+.content {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 5px;
+}
+
+
+
+
